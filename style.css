@@ -63,7 +63,7 @@ nav ul li a:hover {
 }
 
 main {
-    padding-top: 120px; /* Adjusted to ensure space below header */
+    padding-top: 150px; /* Increased padding to create extra space below the header */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -116,7 +116,7 @@ main {
     width: 85%;
     max-width: 1100px;
     margin: auto;
-    padding: 50px 0;
+    padding: 70px 0; /* Adjusted padding to match the new header spacing */
     text-align: left;
 }
 
@@ -127,7 +127,7 @@ main {
 }
 
 .contact-container {
-    padding-top: 120px;
+    padding-top: 150px; /* Ensuring extra space below header for contact page as well */
 }
 
 @media (max-width: 768px) {
