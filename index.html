@@ -3,75 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Aspirations and Goals</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .about-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-        .about-container.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .about-container img {
-            width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .about-text {
-            max-width: 600px;
-        }
-    </style>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Header -->
     <header>
         <h1>Christian Seaton</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="certifications.html">Certifications</a></li>
                 <li><a href="resume.pdf">Resume</a></li>
-                <li><a href="Aspirations.pdf">Goals</a></li>
+                <li><a href="goals.pdf">Goals</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
-    <section id="about">
-    <img src="palms.jpeg" alt="Christian Seaton" id="about-image">
-    <div>
-        <h2>About Me</h2>
-        <p>Hello! My name is Christian Seaton, and I am a senior studying Information Science at the University of South Florida’s Tampa campus. 
-        My concentration is in Information Security, and I am currently preparing for the CompTIA Network+ certification, with plans to later take the AWS Cloud Computing Exam.</p>
-    </div>
-</section>
 
-    
+    <!-- About Section -->
+    <section id="about">
+        <img src="palms.jpeg" alt="Christian Seaton">
+        <div>
+            <h2>About Me</h2>
+            <p>Hello! My name is Christian Seaton, and I am a senior studying Information Science at USF...</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Christian Seaton | <a href="https://github.com/realchrisseaton" target="_blank">GitHub</a></p>
+        <p>&copy; 2025 Christian Seaton</p>
     </footer>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const aboutSection = document.querySelector(".about-container");
-            function checkScroll() {
-                const rect = aboutSection.getBoundingClientRect();
-                if (rect.top < window.innerHeight * 0.75) {
-                    aboutSection.classList.add("show");
-                    window.removeEventListener("scroll", checkScroll);
-                }
-            }
-            window.addEventListener("scroll", checkScroll);
-            checkScroll();
-        });
+
+    <!-- JavaScript Link -->
     <script src="script.js"></script>
 </body>
 </html>
