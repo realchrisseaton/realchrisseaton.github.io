@@ -1,19 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const aboutSection = document.getElementById("about");
-    const footer = document.querySelector("footer");
+    document.body.classList.add("loaded");
 
-    function revealOnScroll() {
-        const scrollPosition = window.scrollY + window.innerHeight;
-        
-        if (aboutSection.offsetTop < scrollPosition) {
-            aboutSection.classList.add("visible");
-        }
-        
-        if (footer.offsetTop < scrollPosition) {
-            footer.classList.add("visible");
-        }
-    }
+    const reveals = document.querySelectorAll(".reveal");
 
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll(); // Initial check on page load
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.3 });
+
+    reveals.forEach(reveal => observer.observe(reveal));
 });
