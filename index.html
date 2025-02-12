@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career Aspirations and Goals</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .about-container.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .about-container img {
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .about-text {
+            max-width: 600px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,12 +44,34 @@
             </ul>
         </nav>
     </header>
+    
     <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my professional portfolio! I am Christian Seaton, a senior Information Science student at USF Tampa, specializing in Information Security. I am passionate about cybersecurity, networking, and cloud computing.</p>
+        <div class="about-container">
+            <img src="809EB6FD-C068-4C91-B8E3-D4887D877BC1.jpeg" alt="Christian Seaton">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Welcome to my professional portfolio! I am Christian Seaton, a senior Information Science student at USF Tampa, specializing in Information Security. I am passionate about cybersecurity, networking, and cloud computing.</p>
+            </div>
+        </div>
     </section>
+    
     <footer>
         <p>&copy; 2025 Christian Seaton | <a href="https://github.com/realchrisseaton" target="_blank">GitHub</a></p>
     </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const aboutSection = document.querySelector(".about-container");
+            function checkScroll() {
+                const rect = aboutSection.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.75) {
+                    aboutSection.classList.add("show");
+                    window.removeEventListener("scroll", checkScroll);
+                }
+            }
+            window.addEventListener("scroll", checkScroll);
+            checkScroll();
+        });
+    </script>
 </body>
 </html>
