@@ -13,41 +13,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Header Animation */
-header {
-    background-color: #222;
-    color: white;
-    padding: 15px 0;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.5s ease;
-}
-
-/* Navigation Animation */
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
-    color: #00c3ff;
-}
-
 /* About Me Section */
 #about {
     display: flex;
@@ -96,22 +61,3 @@ footer.visible {
     opacity: 1;
     transform: translateY(0);
 }
-
-/* JavaScript to Add Visibility on Scroll */
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const aboutSection = document.getElementById("about");
-        const footer = document.querySelector("footer");
-        function revealOnScroll() {
-            const scrollPosition = window.scrollY + window.innerHeight;
-            if (aboutSection.offsetTop < scrollPosition) {
-                aboutSection.classList.add("visible");
-            }
-            if (footer.offsetTop < scrollPosition) {
-                footer.classList.add("visible");
-            }
-        }
-        window.addEventListener("scroll", revealOnScroll);
-        revealOnScroll(); // Initial check on page load
-    });
-</script>
