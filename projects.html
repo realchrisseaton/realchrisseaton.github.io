@@ -3,13 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Projects | Christian Seaton</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <style>
+        /* Project Page Button Styles */
+        .projects-container {
+            margin-top: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .project-button {
+            background-color: #AA99FA;
+            color: white;
+            border: 2px solid white;
+            padding: 10px 40px;
+            font-size: 16px;
+            text-align: center;
+            width: 3.5in;
+            height: 0.75in;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .project-button:hover {
+            background-color: white;
+            color: #AA99FA;
+            border-color: #AA99FA;
+            width: 3.75in; /* expands by about 0.25 inches */
+            height: 0.9in;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>My Projects</h1>
+        <h1>Projects</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,11 +57,16 @@
     </header>
 
     <main class="projects-container">
-        <h2>Projects</h2>
-        <div class="project reveal">
-            <h3>In Progress</h3>
-            <p>As time goes on, I will actively be updating this page, documenting all projects and achievements here!</p>
-        </div>
+        <a href="bsis_part1.pdf" class="project-button" target="_blank">BSIS Program Review Part 1</a>
+        <a href="bsis_part2.pdf" class="project-button" target="_blank">BSIS Program Review Part 2</a>
+        <a href="case_study.pdf" class="project-button" target="_blank">Case Study Analysis</a>
+        <a href="information_policy.pdf" class="project-button" target="_blank">Information Policy</a>
+        <a href="project_management_plan.pdf" class="project-button" target="_blank">Project Management Plan</a>
+        <a href="reflective_essay.pdf" class="project-button" target="_blank">Reflective Essay</a>
     </main>
+
+    <footer>
+        <p>&copy; 2025 Christian Seaton. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
