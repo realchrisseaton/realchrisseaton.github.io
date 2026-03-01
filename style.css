@@ -229,3 +229,17 @@ nav ul li a:hover {
     background: #ffffff;
     color: #000;
 }
+
+.project-card {
+    background: #111;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #222;
+    margin: 20px 0;
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border: 1px solid #444;
+}
